@@ -1,0 +1,35 @@
+name: Build React App
+
+on:
+  push:
+    branches: [ "main" ]   # runs on push to main branch
+  pull_request:
+    branches: [ "main" ]   # runs on PR to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout your code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Setup Node.js (latest LTS or current stable)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'node'   # "node" = latest stable version
+          check-latest: true     # ensures you get the latest release
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Run build
+      - name: Build the project
+        run: npm run build
+
+      # 5. Run tests (if you have tests)
+      - name: Run tests
+        run: npm test -- --watchAll=false
