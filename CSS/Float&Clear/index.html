@@ -6,12 +6,13 @@
     <title>Alignment</title>
     <style>
         *{
-
+            box-sizing: border-box;
         }
         .container{
             width: 900px;
             margin: 33px auto;
             border: 2px solid black;
+            background-color: rgb(216, 186, 146);
         }
         .item{
             border: 5px solid gray;
@@ -19,23 +20,40 @@
             padding: 10px 20px;
             background-color: rgb(232, 158, 158);
         }
+        #fruits{
+            float: left;
+            width: 45%;
+        }
+        #computer{
+            float: right;
+            width: 48%;
+        }
+        #stationary{
+            clear: both;
+            width: 100%;
+        }
+        h1{
+            margin: auto;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>Welcome to my Store</h1>
         <div id="fruits" class="item">
             <h3>Fruits</h3>
             <p id="fruitpara" class="para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perspiciatis debitis voluptate sequi et numquam. Doloribus facere velit quam voluptatibus enim dolor officia, atque sequi, tempora dolorem et nesciunt minima?
             </p>
         </div>
-        <div id="fruits" class="item">
+        <div id="computer" class="item">
             <h3>Computer</h3>
             <p id="computerpara" class="para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perspiciatis debitis voluptate sequi et numquam. Doloribus facere velit quam voluptatibus enim dolor officia, atque sequi, tempora dolorem et nesciunt minima?
             </p>
         </div>
-        <div id="fruits" class="item">
+        <div id="stationary" class="item">
             <h3>Stationary</h3>
             <p id="stationarypara" class="para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perspiciatis debitis voluptate sequi et numquam. Doloribus facere velit quam voluptatibus enim dolor officia, atque sequi, tempora dolorem et nesciunt minima?
