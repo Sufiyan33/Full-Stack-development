@@ -11,9 +11,14 @@
             width: 100%;
             display: flex; /*Initilaize the box as flex container*/
             flex-direction: row; /*Default value is row*/
-            flex-direction: column;
+            /*flex-direction: column;
             flex-direction: row-reverse;
-            flex-direction: column-reverse;
+            flex-direction: column-reverse;*/
+
+            flex-wrap: wrap; /*Default value is no-wrap*/
+            flex-wrap: wrap-reverse;
+
+            flex-flow: row-reverse wrap; /*This is a shorthand of flex-direction and wrap*/
             
         }
         .item{
