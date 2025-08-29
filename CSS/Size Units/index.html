@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font size units</title>
+    <style>
+        html{
+            font-size: 15px;
+        }
+        .container{
+            font-size: 12px;
+            border: 2px solid red;
+            height: 100vh;
+            width: 100vw;
+            /* vh or vw will take height or width full size of the view page*/
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 5em; /* Parent contanier font size 12px * 5px = 60px*/
+            padding: 2em; /*2x of font size = 60 * 2 = 120px */
+        }
+        #second{
+            font-size: 5rem; /*10x of parent contanier font size, 5 * 15 = 75px */
+            padding: 3rem; /* Parent (html) font size = 15px * 3px = 75px */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is the first heading</h1>
+        <h1 id="second">This is the second heading</h1>
+        <h1 id="third">This is the third heading</h1>
+    </div>
+</body>
+</html>

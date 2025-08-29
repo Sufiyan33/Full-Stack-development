@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            background-color: lightblue;
+            text-align: center;
+            font-size: 60px;
+            display: none;
+        }
+
+        /* We can show specific screen using meding queries but to use it you need to set display = none */
+        @media (max-width: 300px) {
+            #box-1{
+                display: block;
+                color: tomato;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 500px) {
+            #box-2{
+                display: block;
+                background-color: lightcoral;
+                color: white;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 800px) {
+            #box-3{
+                display: block;
+                background-color: green;
+                color: white;
+            }
+        }
+
+        @media (min-width: 800px) {
+            #box-4{
+                display: block;
+                background-color: rgb(92, 73, 235);
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- If you want to get 4 div with class box & with id box-1, box-2... then type this = div.box#box-$*4 -->
+    <div class="box" id="box-1">Mai ek Iphone hoon</div>
+    <div class="box" id="box-2">Mai ek Tablet hoon</div>
+    <div class="box" id="box-3">Mai ek Computer hoon</div>
+    <div class="box" id="box-4">Mai ek widescreen computer hoon</div>
+</body>
+</html>
